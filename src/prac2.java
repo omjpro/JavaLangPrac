@@ -10,7 +10,11 @@ public class prac2 {
         String input = scan.nextLine();
         String result = new String();
         while (input.length() < 1 || input.length() > 50) {
-            System.out.println("글자수 50자를 초과하였습니다, 다시 입력하세요");
+            if (input.length() < 1) {
+                System.out.println("입력값이 없습니다. 다시 입력하세요");
+            } else {
+                System.out.println("글자수 50자를 초과하였습니다, 다시 입력하세요");
+            }
             input = scan.nextLine();
             if (input.length() > 1 && input.length() < 50) {
                 break;
